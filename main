@@ -37,3 +37,9 @@ plt.figure(figsize=(12, 8))
 plot_tree(model, filled=True, feature_names=X.columns, class_names=['no', 'yes'])
 plt.title("Decision Tree")
 plt.show()
+
+
+# Step 10: Validate predictions on the test set
+print("\nTest Set Prediction Validation:")
+for actual, predicted in zip(y_test, y_pred):
+    print(f"Actual: {'yes' if actual == 1 else 'no'}, Predicted: {'yes' if predicted == 1 else 'no'} - {'Correct' if actual == predicted else 'Incorrect'}")
